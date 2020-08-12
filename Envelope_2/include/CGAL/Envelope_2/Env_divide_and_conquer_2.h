@@ -86,11 +86,11 @@ public:
    * Constructor with a traits object.
    * \param _traits The traits object.
    */
-  Envelope_divide_and_conquer_2 (const Traits_2* _traits) :
+  Envelope_divide_and_conquer_2 (Traits_2* _traits) :
     own_traits(false),
     env_type(LOWER)
   {
-    traits = static_cast<const Traits_adaptor_2*> (_traits);
+    traits = reinterpret_cast<Traits_adaptor_2*> (_traits);
   }
 
   /*!
